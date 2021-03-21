@@ -53,7 +53,7 @@
 
     $json = json_decode($response, true);
     /* Prevent from duplicated casual skin of SkinsRestorer */
-    $transformedName = ' ' . $playername;
+    $transformedName = $playername;
 
     /* MineSkin API returned unusable data */
     if(empty($json['data']['texture']['value']) || empty($json['data']['texture']['signature'])){
